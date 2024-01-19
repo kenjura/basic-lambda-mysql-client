@@ -1,0 +1,16 @@
+{
+  "name": "basic-lambda-mysql-client",
+  "version": "0.1.0",
+  "description": "lambda function to execute basic mysql queries for use in an API Gateway REST API",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "jest": "^29.7.0",
+    "mysql": "^2.18.1"
+  }
+}
