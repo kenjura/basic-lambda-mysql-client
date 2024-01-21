@@ -4,12 +4,15 @@
   "description": "lambda function to execute basic mysql queries for use in an API Gateway REST API",
   "main": "index.mjs",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "deploy": "zip -r function.zip . && aws lambda update-function-code --function-name system8 --zip-file fileb://function.zip",
+    "test": "env $(cat /etc/basic-lambda-mysql-client.env) jest"
   },
   "type": "module",
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@babel/preset-env": "^7.23.8",
+    "babel-jest": "^29.7.0",
     "jest": "^29.7.0",
     "mysql": "^2.18.1"
   }

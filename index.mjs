@@ -1,10 +1,12 @@
-import { getPowers } from "./src/getPowers.mjs";
+import { get } from "./src/get.js";
+import { debugLog, response } from "./src/helper/responseHelper.js";
 
 export const handler = async (event) => {
   console.log("handler called");
 
-  const powers = await getPowers();
-  console.log("attempting to log power count:");
-  console.log(powers.length);
-  return JSON.stringify(powers);
+  try {
+    return get(event);
+  } catch (err) {
+    return response(500, debugLog(event));
+  }
 };
