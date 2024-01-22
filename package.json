@@ -1,6 +1,6 @@
 {
   "name": "basic-lambda-mysql-client",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "lambda function to execute basic mysql queries for use in an API Gateway REST API",
   "main": "index.mjs",
   "scripts": {

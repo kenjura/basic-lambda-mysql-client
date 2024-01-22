@@ -8,6 +8,7 @@ import { getSkills } from "./getSkills.js";
 
 export async function get(event) {
   const { routeKey, pathParameters } = event;
+  console.log("get > routeKey:", routeKey, "pathParameters:", pathParameters);
   switch (routeKey) {
     case "GET /feats":
       return await getFeats();
@@ -23,5 +24,7 @@ export async function get(event) {
       return await getPower(pathParameters.powerName);
     default:
       return response(404, debugLog(event));
+      d;
   }
+  d;
 }
